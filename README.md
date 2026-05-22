@@ -6,7 +6,7 @@ This project analyzes New Jersey Title I district enrollment data for grades 5â€
 ## Tools Used
 - MySQL
 - Google Looker Studio
-- Excel / CSV data cleaning
+- Excel and CSV data cleaning
 
 ## Objectives
 1. Rank NJ counties by total grade 5â€“8 enrollment in Title I districts.
@@ -16,11 +16,21 @@ This project analyzes New Jersey Title I district enrollment data for grades 5â€
 - NJ public school enrollment data
 - Title I allocation data
 
-## Process
-- Extracted and cleaned enrollment and Title I datasets
-- Imported datasets into MySQL
-- Used SQL joins, aggregation, filtering, and grouping
-- Created visualizations in Looker Studio
+## Methodology
+- Cleaned and prepared enrollment and Title I allocation datasets in Excel and Power Query
+- Imported datasets into MySQL for analysis
+- Used SQL joins, aggregation, filtering, and grouping to analyze grade 5â€“8 enrollment
+- Standardized district names using SQL string functions to resolve inconsistencies across datasets
+- Built visualizations in Google Looker Studio
+
+## Challenges
+- Identifying the correct columns to join datasets together
+- Resolving inconsistent district naming formats across datasets
+- Cleaning and combining data extracted from PDF tables
+
+## Key Findings
+- Identified the NJ counties with the highest grade 5â€“8 enrollment in Title I districts
+- Ranked schools within Title I districts by grade 5-8 enrollment totals
 
 ## Dashboard
 
@@ -37,3 +47,4 @@ JOIN title1_allocations AS t
 WHERE t.funds > 0
 GROUP BY e.`County Name`
 ORDER BY middle_school_sum DESC;
+```
