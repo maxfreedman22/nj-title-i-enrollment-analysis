@@ -23,7 +23,8 @@ This project analyzes New Jersey Title I district enrollment data for grades 5â€
 - Created visualizations in Looker Studio
 
 ## Dashboard
-[Looker Studio Link Here]
+
+![Dashboard Screenshot](looker_dashboard.png)
 
 ## Example Queries
 ```sql
